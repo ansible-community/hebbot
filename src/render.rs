@@ -340,7 +340,7 @@ fn prepare_message(msg: String) -> String {
 
 fn random_verb() -> String {
     let mut rng = rand::thread_rng();
-    let verbs = vec!["reports", "says", "announces"];
+    let verbs = vec!["said", "announced", "shared", "contributed"];
     let id = rng.gen_range(0..verbs.len());
     verbs[id].to_string()
 }
