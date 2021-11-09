@@ -189,7 +189,7 @@ pub fn render(news_list: Vec<News>, config: Config, editor: &RoomMember) -> Rend
 
     // Do the actual markdown rendering
     for (_, render_section) in render_sections {
-        let md_section = format!("# {}\n\n", render_section.section.title);
+        let md_section = format!("## {}\n\n", render_section.section.title);
         report_text += &md_section;
 
         // First add news without project information
@@ -340,7 +340,7 @@ fn prepare_message(msg: String) -> String {
 
 fn random_verb() -> String {
     let mut rng = rand::thread_rng();
-    let verbs = vec!["reports", "says", "announces"];
+    let verbs = vec!["said", "shared", "contributed"];
     let id = rng.gen_range(0..verbs.len());
     verbs[id].to_string()
 }
